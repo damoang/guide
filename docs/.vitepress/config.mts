@@ -37,6 +37,7 @@ export default defineConfig({
             text: '주요 기능',
             items: [
               { text: '알림', link: '/member/notification' },
+              { text: '서명', link: '/member/signature' },
               { text: '회원 메모', link: '/member/memo' },
               { text: '쪽지', link: '/member/message' },
               { text: '신고 및 차단' },

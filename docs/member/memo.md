@@ -33,6 +33,6 @@
 
 ## 메모 관리
 
-<code><i class="bi bi-grid"></i> 마이메뉴</code> 또는 페이지 상단의 <code><i class="bi bi-person-circle"></i></code> 아이콘을 클릭하여 <code><i class="bi bi-journal-text"></i> 메모관리</code>에서 메모를 확인하고 편집할 수 있습니다.
+<code><i class="bi bi-grid"></i> 마이메뉴</code> 또는 페이지 상단의 <code><i class="bi bi-person-circle"></i></code> 아이콘을 클릭하여 <a href="https://damoang.net/plugin/da_member_memo/public/memo_list.php" target="_blank"><i class="bi bi-journal-text"></i> 메모관리</a>에서 메모를 확인하고 편집할 수 있습니다.
 
 <img src="./img/memo-list.png" alt="다모앙 회원메모 관리" style="width: 360px;" />
