@@ -137,3 +137,13 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+
+.tip {
+  --vp-custom-block-font-size: 1rem;
+}
+.tip .custom-block-title::before {
+  content: '\F430';
+  font-family: bootstrap-icons !important;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
