@@ -3,17 +3,10 @@ import { defineConfig } from 'vitepress'
 // organization 이름
 const organizationName: string = 'damoang';
 // 저장소 이름
-const repositoryName: string = 'community-guide';
+const repositoryName: string = 'guide';
 const repositoryUrl: string = `https://github.com/${organizationName}/${repositoryName}/`;
 
 const customConfig = defineConfig({});
-
-if (process.env.NODE_ENV === 'production') {
-} else {
-  customConfig.markdown = {
-    lineNumbers: true,
-  }
-}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,14 +16,15 @@ export default defineConfig({
   base: `/${repositoryName}/`,
   lastUpdated: true,
   cleanUrls: true,
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo/logo-mini.png',
     externalLinkIcon: true,
-    nav: [
-      { text: '회원', link: '/member/' },
-      { text: '커스텀 UI', link: '/custom-ui/' },
-    ],
+    // nav: [
+    //   { text: '회원', link: '/member/' },
+    //   { text: '커스텀 UI', link: '/custom-ui/' },
+    // ],
 
     sidebar: [
       {
@@ -61,17 +55,24 @@ export default defineConfig({
         text: '커스텀 UI',
         link: '/custom-ui/',
         items: [
-          { text: '단축키', link: '/custom-ui/shortcut' },
-          { text: 'UI' },
-          { text: '메뉴', link: '/custom-ui/menu' },
-          { text: '메모', link: '/custom-ui/memo' },
-          { text: '목록' },
-          { text: '추천' },
-          { text: '단축 버튼', link: '/custom-ui/expand-button' },
+          { text: '단축키 설정', link: '/custom-ui/shortcut' },
+          { text: 'UI 설정', link: '/custom-ui/ui' },
+          { text: '메뉴 설정', link: '/custom-ui/menu' },
+          { text: '메모 설정', link: '/custom-ui/memo' },
+          { text: '목록 설정', link: '/custom-ui/list' },
+          { text: '추천 설정', link: '/custom-ui/recommend' },
+          { text: '단축버튼 설정', link: '/custom-ui/expand-button' },
         ]
       },
       {
-        text: '다모앙에 광고 게시하기',
+        text: '자주묻는 질문 & 팁',
+        link: '/tips/',
+        items: [
+          // { text: '다모앙 팁', link: '/tips/angs' },
+        ]
+      },
+      {
+        text: '다모앙에 광고하기',
         link: '/advertise/',
         items: [
           { text: '이미지 배너', link: '/advertise/banner' },
@@ -111,4 +112,8 @@ export default defineConfig({
       }
     }
   },
+
+  markdown: {
+    lineNumbers: process.env.NODE_ENV === 'production'
+  }
 })
